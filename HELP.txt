@@ -1,0 +1,214 @@
+/*****************************
+
+	rippedblue
+
+	A premium web template by spyka webmaster
+
+	Contact: http://www.spyka.net/contact
+	Support: http://www.spyka.net/forums
+
+/*****************************
+
+
+Thank you for purchasing this template. This document aims to help you in setting up and the basic usage and editing
+of this template. 
+
+
+##
+##	Document contents
+##	
+##	1. Introduction
+##	2. Installation
+##	3. Customisation
+##	4. Special classes
+##	5. Javascript
+##	6. Contact and support
+##
+##
+
+
+
+##	1. Introduction
+#################################
+rippedblue is light dual/single column blue, white and black web template. The template is XHTML and CSS valid and comes
+with multiple layouts. The template package also includes the jQuery javascript library together with a number of plugins
+set up and ready to use.
+
+
+
+##	2. Installation
+#################################
+To install a the template simply upload all HTML files, the /js directory, /images directory and
+styles.css file to your webserver.
+
+
+
+##	3. Customisation
+#################################
+To change the structure and content of the page open the HTML files in your preferred editor or
+text editor. All CSS such as colours and styles are stored in styles.css and are labeled and grouped to find using comments
+
+
+Changing the header text
+------------------------
+Open the HTML files and change the text in the <h1> tag width the #header DIV. Wrap text in <span></span> tags to color 
+it grey as in the default text
+
+
+Changing the selected menu item
+-------------------------------
+Add class="selected" to the menu item of your link you want selected on the main menu, e.g.:
+
+<li class="selected"><a href="mypage.html">My selected link</a></li>
+
+The main menu is contained in the div with id navigation below the header text.
+
+
+Adding and changing the image slider
+------------------------------------
+The content of the homepage image slider is found on line 50 in index.html in the #slides div.
+
+To add slides use the following code, add it to inside the #slides div:
+
+<div>
+				
+	<div class="slide-image"><img src="images/slide-1.png" alt="Slide #1 image" /></div>
+	<div class="slide-text">
+		<h2>slide #1</h2>
+		<p>Fusce euismod consectetuer sapien. Fusce ac velit.</p>
+	</div>
+</div>
+
+The content of div.slide-text will be floated to the left and div.slide-image will be floated to the right.
+
+Be sure to also add a new span with class "jFlowControl" inside the #myController div on line 73, e.g.: 
+<span class="jFlowControl">4</span>
+
+
+Changing page titles (blue headers)
+-----------------------------------
+Edit the <h2> and <h3> tags inside the #page-title div.
+
+
+The main page and sidebar content
+---------------------------------
+The main page content is found in the #page 
+
+The sidebar content is found in the #sidebar directly after #page
+
+The content of single column layouts are found in #content
+
+ 
+
+##	4. Special classes
+#################################
+There are a number of extra 'special' classes you can use on elements which will give them different properties 
+to the default elements.
+
+
+ul.servicelist
+-----------
+A list with class "servicelist" will produce a list like that on the index.html example. 
+Use the classes app-icon, chart-icon, bulb-icon and lock-icon on list elements to display the relevent image.
+A list item without a valid class attached will display a question mark icon
+
+IMPORTANT: the text inside the list item should be wrapped in <span></span> tags.
+
+
+
+ul.blocklist (#sidebar only)
+----------------------------
+Provides a full width list with links given a display style of block. Adds hover effects to links.
+Use class of .selected-item to highlight that item as the selected one.
+
+Example code:
+
+<ul class="blocklist">
+	<li><a href="#">Dolor sit</a></li>
+	<li><a href="#">Duis dolor</a></li>
+	<li class="selected-item"><a href="#">Curabitur</a></li>
+	<li><a href="#">Vestibulum</a></li>
+</ul>
+
+
+
+ul.contactlist (#sidebar only)
+------------------------------
+Provides a simple list of contact methods with related icons:
+
+	li.phone-icon uses background image phone-icon.png in images folder
+	li.email-icon uses background email phone-icon.png in images folder
+	li.address-icon uses background image address-icon.png in images folder
+
+Example code:
+
+<ul class="contactlist">
+	<li class="phone-icon">+44 01489 212988</li>
+	<li class="email-icon">someone@somewhere.com</li>
+	<li class="address-icon">18 Fubar Road, London</li>
+</ul>
+
+
+input.formbutton
+----------------
+Creates blue+white submit button with Verdana text
+
+Example code:
+
+<input type="submit" name="submitform" value="Send message" class="formbutton" />
+
+
+
+img.fadeimg
+-----------
+An image with class of "fadeimg" will add an opacity of 0.5 which will change to 1.0 on hover.
+
+
+##	5. Javascript
+#################################
+This template uses some Javascript to provide better usability and more effects on the web page. All javascript
+files are stored in the /js directory.
+
+There are 4 files included:
+
+	- jquery-1.2.6.min.js - jQuery, a javascript library so you and I don't have to write as much code :)
+	- jquery.flow.1.2.js  - a jQuery plugin which provides the functionality of the slider
+	- jquery.cycle.js     - a jQuery plugin which provides a simple slideshow of images
+	- custom.js	      - Javascript which adds the jQuery effects to the web page along with options
+
+For more information on jQuery see:	  http://jquery.com
+For more information on jFlow see:        http://www.gimiti.com/kltan/wordpress/?p=46
+For more information on jQuery cycle see: http://www.malsup.com/jquery/cycle/
+
+The jFlow plugin has been setup and is ready to be used. See "Adding and changing the image slider" 
+in section 2 of this document.
+
+Using the image slideshow plugin
+--------------------------------
+To use the jQuery cycle image slideshow plugin use the following basic code:
+
+<div class="portfolio-images"> 
+	<img src="images/portfolio-1.jpg" alt="Portfolio image #1" width="300" height="200" /> 
+	<img src="images/portfolio-2.jpg" alt="Portfolio image #2" width="300" height="200" /> 
+	<img src="images/portfolio-3.jpg" alt="Portfolio image #3" width="300" height="200" /> 
+</div> 
+
+Add any extra images within the <div> tag
+
+
+Configuration
+----------------------
+Open cusotm.js within the /js directory to change some simple javascript settings.
+
+Change the value of opacity to change the default opacity of images with class 'fadeimg'
+Change the value of cyclespeed to change the time, in milliseconds, it takes for slides transitions to complete
+Change the value of timeout to change the time, in milliseconds, between each slide of the image slideshow
+
+
+
+
+
+##	6. Contact and support
+#################################
+To get support for this template please either check out our webmaster forums at http://www.spyka.net/forums
+or email us via our contact form at http://www.spyka.net/contact
