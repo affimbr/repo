@@ -2703,14 +2703,14 @@ tbody.collapse.show {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  align-items: left;
+  align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem; }
   .navbar > .container,
   .navbar > .container-fluid {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: left;
     justify-content: space-between; }
 
 .navbar-brand {
