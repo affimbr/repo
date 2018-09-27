@@ -6692,7 +6692,9 @@ article {
 
 article h2.article-title {
   font-size: 3rem;
-  letter-spacing: -2px; }
+  letter-spacing: -2px; 
+  margin-bottom: auto;
+  margin-top: auto; }
 
 article p.article-meta {
   color: #ccc;
