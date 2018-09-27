@@ -2710,7 +2710,7 @@ tbody.collapse.show {
   .navbar > .container-fluid {
     display: flex;
     flex-wrap: wrap;
-    align-items: left;
+    align-items: center;
     justify-content: space-between; }
 
 .navbar-brand {
